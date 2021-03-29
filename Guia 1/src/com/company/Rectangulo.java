@@ -2,8 +2,8 @@ package com.company;
 
 public class Rectangulo {
 
-    public float ancho=1;
-    public float alto=1;
+    private float ancho=1;
+    private float alto=1;
 
     public float getAncho() {
         return ancho;

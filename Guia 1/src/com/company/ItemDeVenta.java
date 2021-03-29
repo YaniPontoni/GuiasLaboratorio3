@@ -3,9 +3,9 @@ package com.company;
 public class ItemDeVenta {
 
     private int id;
-    public  String descripcion;
-    public int cantidad;
-    public float pUnitario;
+    private   String descripcion;
+    private int cantidad;
+    private float pUnitario;
 
     public ItemDeVenta (int id, String descripcion, int cantidad, float pUnitario) {
         this.id = id;

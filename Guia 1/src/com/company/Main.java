@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -86,7 +88,39 @@ public class Main {
         itemDeVenta.imprimirItemDeVenta();
         itemDeVenta2.imprimirItemDeVenta();
 
+        System.out.println("\nPunto 4:");
 
+        // 1)
+
+        CuentaBancaria cuentaBancaria = new CuentaBancaria(1, "Cuenta BBVA", 15000);
+
+        System.out.print("\n2) Ingrese la cantidad que desea acreditar en la cuenta: ");
+
+        Scanner scanner = new Scanner(System.in);
+
+        float cantidad= scanner.nextFloat();
+
+        cuentaBancaria.creditoCuenta(cantidad);
+
+        System.out.println("\nNuevo saldo de su cuenta: " + cuentaBancaria.getBalance());
+
+        System.out.print("\n3) Ingrese el monto de la compra a debitar de la cuenta: ");
+
+        cantidad = scanner.nextFloat();
+
+        cuentaBancaria.debitoCuenta(cantidad);
+
+        System.out.println("\nNuevo saldo de su cuenta: " + cuentaBancaria.getBalance());
+
+        System.out.print("\n4) Ingrese el monto de la compra a debitar de la cuenta: ");
+
+        cantidad = scanner.nextFloat();
+
+        cuentaBancaria.debitoCuenta(cantidad);
+
+        System.out.println("\n5) Imprimiendo los datos de la cuenta bancaria: ");
+
+        cuentaBancaria.imprimirBalance();
 
 
     }

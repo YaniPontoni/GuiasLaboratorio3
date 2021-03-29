@@ -2,10 +2,10 @@ package com.company;
 
 public class Empleado {
 
-    public String dni;
-    public String nombre;
-    public String apellido;
-    public float salario;
+    private String dni;
+    private String nombre;
+    private String apellido;
+    private float salario;
 
     public String getDni() {
         return dni;
