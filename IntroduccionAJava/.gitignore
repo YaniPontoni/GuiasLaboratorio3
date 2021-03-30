@@ -1,4 +1,4 @@
 .idea/
 out/
 IntroduccionAJava/src/com/yani/
-IntroduccionAJava.iml
+*.iml
