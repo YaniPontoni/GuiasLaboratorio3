@@ -1,3 +1,4 @@
 .idea/
 out/
-Guia1.iml
+src/com/company/
+*.iml
