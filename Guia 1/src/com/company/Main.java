@@ -122,6 +122,48 @@ public class Main {
 
         cuentaBancaria.imprimirBalance();
 
+        System.out.println("\nPunto 5:");
+
+        Hora hora = new Hora (13, 04, 22);
+
+        // Avanzando la hora
+
+        System.out.print("\nHora inicializada: ");
+        System.out.println(hora.toString());
+
+        hora.avanzarHora();
+
+        System.out.print("\nAvanzo una hora: ");
+        System.out.println(hora.toString());
+
+        hora.avanzarMinutos();
+
+        System.out.print("Avanzo un minuto: ");
+        System.out.println(hora.toString());
+
+        hora.avanzarSegundos();
+
+        System.out.print("Avanzo un segundo: ");
+        System.out.println(hora.toString());
+
+        // Retrocediendo la hora
+
+        hora.retrocederHora();
+
+        System.out.print("Retrocedo una hora: ");
+        System.out.println(hora.toString());
+
+        hora.retrocederMinutos();
+
+        System.out.print("Retrocedo un minuto: ");
+        System.out.println(hora.toString());
+
+        hora.retrocederSegundos();
+
+        // Devuelta a la hora inicializada
+
+        System.out.print("Retrocedo un segundo (hora inicializada): ");
+        System.out.println(hora.toString());
 
     }
 }
