@@ -6,7 +6,7 @@ public class CuentaBancaria {
     private String nombre;
     private float balance;
 
-    public CuentaBancaria (int id, String nombre, float balance) {
+    public CuentaBancaria(int id, String nombre, float balance) {
         this.id = id;
         this.nombre = nombre;
         this.balance = balance;
@@ -36,12 +36,12 @@ public class CuentaBancaria {
         this.balance = balance;
     }
 
-    public float creditoCuenta (float cantidad) {
+    public float creditoCuenta(float cantidad) {
         this.balance = this.balance + cantidad;
         return this.balance;
     }
 
-    public float debitoCuenta (float cantidad) {
+    public float debitoCuenta(float cantidad) {
 
         if (this.balance < cantidad) {
             mensajeErrorSustraccion();
@@ -52,11 +52,11 @@ public class CuentaBancaria {
         return this.balance;
     }
 
-    public void mensajeErrorSustraccion () {
+    public void mensajeErrorSustraccion() {
         System.out.println("\nUsted está intentando extraer más dinero del que tiene disponible!");
     }
 
-    public void imprimirBalance () {
+    public void imprimirBalance() {
         System.out.println("\nBalance[id=" + id + ", Nombre=" + nombre + ", Balance=" + balance + "]");
     }
 }
