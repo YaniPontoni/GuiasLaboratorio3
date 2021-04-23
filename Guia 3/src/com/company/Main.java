@@ -27,5 +27,54 @@ public class Main {
         JOptionPane.showMessageDialog(null, "Volumen: " + cilindro2.calcularVolumen());
 
         // Punto 2
+
+        JOptionPane.showMessageDialog(null, "Ejercicio 2");
+
+        var toma = new Estudiante(38596481, "Toma", "Lindback", "tlindback0@nymag.com", "1543 Fuller Street", 2001, 4500, "TUP");
+        var hurley = new Estudiante(22663067, "Hurley", "MacKettrick", "hmackettrick1@sitemeter.com", "5 Loeprich Junction", 1997, 4500, "TUP");
+        var orbadiah = new Estudiante(31210000, "Orbadiah", "Ostridge", "oostridge2@youtube.com", "9313 Farwell Terrace", 2000, 5800, "TUSI");
+        var ardath = new Estudiante(16425641, "Ardath", "Jager", "ajager3@over-blog.com", "4048 La Follette Plaza", 1999, 5800, "TUSI");
+        var rector = new Staff(41212102, "Rene", "Brundell", "rbrundell4@woothemes.com", "71098 Merry Trail", 75000, "Tarde");
+        var administrativo = new Staff(19452870, "Reuven", "Barenski", "rbarenski5@mtv.com", "1956 Acker Place", 30000, "Maniana");
+        var profesor = new Staff(19837315, "Damien", "Clucas", "dclucas6@admin.ch", "531 Messerschmidt Junction", 47000, "Tarde");
+        var profesor2 = new Staff(16449874, "Syman", "Offener", "soffener7@go.com", "7 Lien Plaza", 47000, "Maniana");
+
+        var institucion = new Persona[10];
+        
+        institucion[0] = toma;
+        institucion[1] = hurley;
+        institucion[2] = orbadiah;
+        institucion[3] = ardath;
+        institucion[4] = rector;
+        institucion[5] = administrativo;
+        institucion[6] = profesor;
+        institucion[7] = profesor2;
+        
+        int contadorEstudiantes = 0;
+        int contadorStaff = 0;
+
+        for (Persona persona : institucion) {
+            if (persona != null) {
+                if (persona instanceof Estudiante) contadorEstudiantes++;
+                if (persona instanceof Staff) contadorStaff++;
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "En la institucion hay " + contadorEstudiantes + " estudiantes.");
+        JOptionPane.showMessageDialog(null, "En la institucion hay " + contadorStaff + " miembros del staff.");
+
+        double totalCuota = 0.0;
+
+        for (Persona persona : institucion) {
+            if (persona != null) {
+                if (persona instanceof Estudiante) totalCuota += ((Estudiante) persona).getCoutaMensual();
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "Total de ingresos por cuotas de estudiantes: " + totalCuota);
+
+        // Punto 3
+
+
     }
 }
