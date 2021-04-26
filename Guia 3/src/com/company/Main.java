@@ -75,6 +75,27 @@ public class Main {
 
         // Punto 3
 
+        JOptionPane.showMessageDialog(null, "Ejercicio 3");
 
+        var circulo = new ACirculo("Rojo", 30.7);
+        var rectangulo = new Rectangulo("Azul", 10.8, 20.9);
+        var cuadrado = new Cuadrado("Verde", 8.9);
+
+        JOptionPane.showMessageDialog(null, circulo);
+        JOptionPane.showMessageDialog(null, rectangulo);
+        JOptionPane.showMessageDialog(null, cuadrado);
+
+        FiguraGeometrica[] figuras = new FiguraGeometrica[3];
+
+        figuras[0] = circulo;
+        figuras[1] = rectangulo;
+        figuras[2] = cuadrado;
+
+        for (FiguraGeometrica figu : figuras) {
+            if (figu != null) {
+                JOptionPane.showMessageDialog(null, "El area de la figura " + figu.getClass().getSimpleName() + " es " + figu.calcularArea());
+                JOptionPane.showMessageDialog(null, "El perimetro de la figura " + figu.getClass().getSimpleName() + " es " + figu.calcularPerimetro()+ "\n");
+            }
+        }
     }
 }
